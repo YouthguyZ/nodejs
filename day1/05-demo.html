@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>用户中心</title>
+	<style>
+		.test {
+			width: 6.5714rem;
+			height: 2.1429rem;
+			line-height: 2.1429rem;
+			margin: 0 auto;
+			text-align: center;
+			border: 0.0714rem solid gray;
+			border-radius: 1rem;
+		}
+		.show {
+			width: 85vw;
+			height: 70vh;
+			border: 0.0714rem solid lightgray;
+			border-radius: 1rem;
+			padding: 1rem 0.5rem;
+			position: fixed;
+			left: 1.15rem;
+			bottom: -32rem;
+			text-indent: 2rem;
+			transition: bottom 1s ease;
+			background-color: lightblue;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ 
+</head>
+<body>
+	<div class="test">
+		test
+	</div>
+	<div class="show">
+		hello world
+	</div>
+ 
+	<script>
+		$('.test').click(() => {
+			$('.show')[0].style.cssText = 'bottom: -1rem; '
+		});
+		$('.show').click(() => {
+			$('.show')[0].style.cssText = 'bottom: -32rem;'
+		});
+	</script>
+</body>
+</html>
